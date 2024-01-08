@@ -1,0 +1,78 @@
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.item-page {
+  &__bgc {
+    background-color: $color-item-bg;
+  }
+
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 2.5rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 12rem 0;
+
+  @include respond(md) {
+    grid-template-columns: 1fr;
+  }
+
+  &__imgs {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img {
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+  }
+  &__content {
+    padding: 4rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__size {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &-btn {
+      flex: 1;
+      padding: 10px 0;
+      border: 1px solid $color-black;
+      position: relative;
+
+      &--active {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__btn {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 11px 0;
+    position: relative;
+  }
+
+  &__lowstock {
+    position: absolute;
+    left: 1rem;
+    color: orangered;
+
+    animation: pulsate 2s infinite;
+  }
+}

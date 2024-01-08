@@ -1,0 +1,133 @@
+%general {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  background-color: transparent;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  @extend %general;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  color: $color-black;
+  position: relative;
+  border: 1px solid $color-primary;
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  &--white {
+    border: 1px solid $color-white;
+    color: $color-white;
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+
+  &-text {
+    @extend %general;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &-pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    &__shape {
+      width: 2.75rem;
+      height: 1.5rem;
+      border-radius: 999px;
+
+      &::after {
+        content: "";
+        inset-inline-start: 2px;
+        background-color: $color-white;
+        position: absolute;
+        top: 2px;
+        height: 1.25rem;
+        width: 1.25rem;
+        border-radius: 50%;
+        transition: all 0.5s;
+      }
+    }
+
+    &__available {
+      background-color: $color-primary;
+
+      &::after {
+        transform: translateX(100%);
+      }
+    }
+    &__unavailable {
+      background-color: $color-grey-light-2;
+    }
+  }
+
+  &-form {
+    text-transform: uppercase;
+    background-color: $color-primary;
+    border-radius: 2px;
+    padding: 1rem 2rem;
+    color: $color-white;
+
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+    &:active {
+      transform: translateY(2px);
+    }
+
+    &--cancel {
+      background-color: orangered;
+    }
+  }
+
+  &-trash {
+    position: absolute;
+    font-size: 3.75rem;
+    line-height: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: orangered;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 70%;
+    }
+  }
+
+  &-star {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    font-size: 2rem;
+    color: $color-primary;
+
+    &--not-first {
+      opacity: 20%;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 100%;
+      }
+    }
+  }
+}

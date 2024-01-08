@@ -1,0 +1,54 @@
+@keyframes showAccordion {
+  0% {
+    opacity: 0;
+    max-height: 0px;
+  }
+  100% {
+    opacity: 1;
+    max-height: 350px;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-bottom: $border-line;
+
+  &__title {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    & :hover,
+    &:hover {
+      transform: translateY(-2px);
+      color: $color-primary;
+    }
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__content {
+    animation-name: showAccordion;
+    animation-duration: 1.5s;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    transition: rotate 0.5s;
+
+    &--open {
+      rotate: 180deg;
+    }
+  }
+}

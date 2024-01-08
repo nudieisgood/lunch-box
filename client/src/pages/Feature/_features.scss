@@ -1,0 +1,58 @@
+.features-page {
+  margin-top: 12rem;
+  padding: 0 1.5rem;
+
+  &__item-box {
+    display: grid;
+    gap: 3rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  }
+
+  &__item {
+    position: relative;
+
+    &-img {
+      position: relative;
+
+      :hover {
+        opacity: 70%;
+      }
+      img {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      h4 {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        background-color: $color-white;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    &-text {
+      padding: 1rem 1.2rem;
+      p {
+        color: $color-grey-dark;
+        font-style: italic;
+        font-size: 1.5rem;
+      }
+
+      h4 {
+        margin-top: 1rem;
+      }
+    }
+
+    &-edit {
+      position: absolute;
+      bottom: 0.5rem;
+      right: 0.75rem;
+
+      &:hover {
+        color: orangered;
+      }
+    }
+  }
+}

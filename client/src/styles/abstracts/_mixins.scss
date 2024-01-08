@@ -1,0 +1,38 @@
+// MEDIA QUERY MANAGE
+/*
+ 0 - 600px 
+ 600 - 900px
+ 900 - 1200px
+ 1200 - 1800px
+ 1800px +
+*/
+
+/*
+$breakpoint
+-sm :640px  40em
+-md :768px  48em
+-lg :1024px 64em
+-xl :1280px 80m
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media only screen and (max-width: 40em) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media only screen and (max-width: 64em) {
+      @content;
+    }
+  }
+  @if $breakpoint == xl {
+    @media only screen and (max-width: 80em) {
+      @content;
+    }
+  }
+}

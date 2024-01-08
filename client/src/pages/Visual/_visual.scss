@@ -1,0 +1,60 @@
+.visual-page {
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    padding: 0 2.5rem;
+
+    @include respond(sm) {
+      display: none;
+    }
+  }
+
+  &__num {
+    font-weight: 800;
+    font-size: 3.75rem;
+    color: rgba($color-black, 0.7);
+  }
+
+  &__imgs {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+
+    &--right {
+      margin-top: 16rem;
+    }
+  }
+
+  &__img {
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+  }
+
+  &__sub {
+    display: none;
+
+    @include respond(sm) {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4rem;
+
+      gap: 6rem;
+    }
+    &-imgs {
+      &--left {
+        padding-right: 7rem;
+      }
+      &--right {
+        padding-left: 7rem;
+      }
+    }
+  }
+}
+
+.visual__item {
+  position: relative;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}

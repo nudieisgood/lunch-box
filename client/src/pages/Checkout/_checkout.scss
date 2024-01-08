@@ -1,0 +1,61 @@
+.checkout {
+  padding: 0 2.5rem;
+
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include respond(md) {
+    grid-template-columns: 1fr;
+  }
+
+  .heading-1 {
+    font-size: 1.75rem;
+  }
+
+  &__form > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__form-group > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  &__input-group {
+    display: flex;
+    gap: 0.25rem;
+
+    div {
+      flex: 1;
+    }
+  }
+
+  &__detail {
+    border-top: 1px solid $color-grey-light-3;
+
+    @include respond(md) {
+      grid-row: 1 / 2;
+    }
+
+    &-item {
+      padding: 0.6rem 0;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 6.25rem 1fr repeat(2, auto);
+      gap: 1rem;
+      border-bottom: 1px solid $color-grey-light-3;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: end;
+    margin-top: 2.5rem;
+
+    .heading-2 {
+      color: $color-black;
+    }
+  }
+}

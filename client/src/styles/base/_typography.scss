@@ -1,0 +1,65 @@
+.section-title {
+  color: $color-black;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+
+  &--white {
+    color: $color-white;
+  }
+
+  @include respond(md) {
+    font-size: 2rem;
+  }
+
+  @include respond(sm) {
+    font-size: 1.8rem;
+  }
+}
+
+.heading-1 {
+  display: inline-block;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  @include respond(md) {
+    font-size: 2rem;
+  }
+
+  @include respond(sm) {
+    font-size: 1.8rem;
+  }
+}
+
+.heading-2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: $color-grey-dark-2;
+}
+
+.heading-3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  color: $color-grey-dark-2;
+}
+
+.heading-4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 100;
+  color: $color-grey-dark-3;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  line-height: 1.75rem;
+  letter-spacing: 0.1rem;
+}

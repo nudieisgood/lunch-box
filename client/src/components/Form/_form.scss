@@ -1,0 +1,114 @@
+.form {
+  &__filed {
+    &-title {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-weight: 700;
+      color: $color-black;
+      width: max-content;
+    }
+  }
+
+  &__error {
+    color: orangered;
+  }
+
+  &__select {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  &__images {
+    display: grid;
+    gap: 0.25rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+  &__image {
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: 3px;
+  }
+
+  &__file-upload {
+    justify-self: self-start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dotted $color-grey-light-3;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: $color-grey-light-1;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $color-grey-light-3;
+    }
+
+    &--icon {
+      padding: 1rem 3rem;
+    }
+    input {
+      display: none;
+    }
+  }
+}
+
+.form-page {
+  position: relative;
+  box-shadow: $text-shadow-1;
+  border-radius: 3px;
+  padding: 1.5rem;
+
+  display: grid;
+  align-items: end;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include respond(lg) {
+    grid-template-columns: 1fr;
+  }
+
+  &__price {
+    display: flex;
+
+    gap: 0.2rem;
+    @include respond(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__size {
+    grid-column: 1 / span 2;
+
+    @include respond(lg) {
+      grid-column: 1 / span 1;
+    }
+
+    &--sizing {
+      display: flex;
+      gap: 0.25rem;
+
+      @include respond(sm) {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+    }
+  }
+
+  &__des,
+  &__imgs {
+    grid-column: 1 / span 3;
+
+    @include respond(lg) {
+      grid-column: 1 / span 1;
+    }
+  }
+}
+
+.form__og-item {
+  position: relative;
+}

@@ -1,0 +1,37 @@
+.footer {
+  background-color: $color-primary;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  justify-items: center;
+
+  @include respond(md) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    gap: 5rem;
+  }
+
+  @include respond(sm) {
+    grid-template-columns: 1fr;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__admin {
+    flex: 1;
+
+    display: flex;
+    align-items: flex-end;
+  }
+}

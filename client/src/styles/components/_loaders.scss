@@ -1,0 +1,29 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid $color-grey-light-3;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: spin 1s linear infinite;
+}
+
+.screen-loader {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include respond(md) {
+    grid-template-columns: 1fr;
+  }
+}

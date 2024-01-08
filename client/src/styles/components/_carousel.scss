@@ -1,0 +1,34 @@
+.carousel {
+  position: relative;
+  height: 100vh;
+  scroll-behavior: auto;
+  overflow: hidden;
+
+  @include respond(md) {
+    height: 70vh;
+  }
+
+  &__slides {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform ease-out 0.5s;
+  }
+
+  &__chevron {
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      color: $color-white;
+      opacity: 60%;
+    }
+
+    &:hover {
+      opacity: 90%;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.pagination {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+
+  &__btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $color-grey-light-2;
+    display: grid;
+    place-items: center;
+
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgba($color-primary, 0.8);
+      color: $color-white;
+    }
+
+    &--active {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.dots {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  &__dot {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 100%;
+    background-color: $color-white;
+    opacity: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover,
+    &--active {
+      opacity: 80%;
+      padding: 0.5rem;
+    }
+  }
+}
